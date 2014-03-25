@@ -9,7 +9,7 @@
 #include "Atomic.h"
 
 class Thread
-	: public boost:noncopyable
+	: public boost::noncopyable
 {
 public:
 	typedef boost::function<void()> ThreadFunc;
