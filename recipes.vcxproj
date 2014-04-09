@@ -34,7 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(BOOST);C:\Python27\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(BOOST_ROOT);C:\Python27\include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -71,9 +71,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="thread\Atomic.h" />
+    <ClInclude Include="thread\Condition.h" />
+    <ClInclude Include="thread\Mutex.h" />
+    <ClInclude Include="thread\Singleton.h" />
     <ClInclude Include="thread\Thread.h" />
+    <ClInclude Include="thread\ThreadLocal.h" />
+    <ClInclude Include="thread\ThreadLocalSingleton.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="thread\test\Atomic_UnitTest.cc" />
+    <ClCompile Include="thread\test\Singleton_UnitTest.cc" />
+    <ClCompile Include="thread\test\Thread_UnitTest.cc" />
     <ClCompile Include="thread\Thread.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
