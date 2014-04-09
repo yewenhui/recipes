@@ -1,5 +1,5 @@
-#ifndef THREAD_H
-#define THREAD_H
+#ifndef _THREAD_H_
+#define _THREAD_H_
 
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
@@ -17,14 +17,14 @@ public:
 	explicit Thread(const ThreadFunc& func, const std::string& name = std::string());
 	~Thread();
 
-	void start();
-	void join();
+	void		start();
+	void		join();
 
-	bool started() const { return m_bStarted; }
-	pid_t tid() const { return *m_tIdPtr; }
+	bool		started() const { return m_bStarted; }
+	pid_t		tid() const { return *m_tIdPtr; }
 	const std::string& name() const { return m_strName; }
 
-	static int getNumCreated() { return m_AtomicNumCreated.get(); }
+	static int	getNumCreated() { return m_AtomicNumCreated.get(); }
 
 private:
 	bool		m_bStarted;
@@ -46,4 +46,4 @@ namespace CurrentThread
 
 }
 
-#endif // THREAD_H
+#endif // _THREAD_H_
