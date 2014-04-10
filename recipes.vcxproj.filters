@@ -36,6 +36,12 @@
     <ClInclude Include="thread\ThreadLocalSingleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="thread\Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\ThreadPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="thread\Thread.cc">
@@ -48,6 +54,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="thread\test\Singleton_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\SingletonThreadLocal_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\ThreadLocal_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\ThreadLocalSingleton_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\Exception.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\Exception_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\ThreadPool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\Observer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -72,17 +72,26 @@
   <ItemGroup>
     <ClInclude Include="thread\Atomic.h" />
     <ClInclude Include="thread\Condition.h" />
+    <ClInclude Include="thread\Exception.h" />
     <ClInclude Include="thread\Mutex.h" />
     <ClInclude Include="thread\Singleton.h" />
     <ClInclude Include="thread\Thread.h" />
     <ClInclude Include="thread\ThreadLocal.h" />
     <ClInclude Include="thread\ThreadLocalSingleton.h" />
+    <ClInclude Include="thread\ThreadPool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="thread\Exception.cc" />
     <ClCompile Include="thread\test\Atomic_UnitTest.cc" />
+    <ClCompile Include="thread\test\Exception_UnitTest.cc" />
+    <ClCompile Include="thread\test\Observer.cc" />
+    <ClCompile Include="thread\test\SingletonThreadLocal_UnitTest.cc" />
     <ClCompile Include="thread\test\Singleton_UnitTest.cc" />
+    <ClCompile Include="thread\test\ThreadLocalSingleton_UnitTest.cc" />
+    <ClCompile Include="thread\test\ThreadLocal_UnitTest.cc" />
     <ClCompile Include="thread\test\Thread_UnitTest.cc" />
     <ClCompile Include="thread\Thread.cc" />
+    <ClCompile Include="thread\ThreadPool.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

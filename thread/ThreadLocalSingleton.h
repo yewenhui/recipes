@@ -2,6 +2,7 @@
 #define _THREAD_LOCAL_SINGLETON_H_
 
 #include <boost/noncopyable.hpp>
+#include <stddef.h> //define NULL
 
 template<typename T>
 class ThreadLocalSingleton

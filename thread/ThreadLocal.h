@@ -2,7 +2,7 @@
 #define _THREAD_LOCAL_H_
 
 #include <boost/noncopyable.hpp>
-#include <pythread.h>
+#include <pthread.h>
 
 template<typename T>
 class ThreadLocal
