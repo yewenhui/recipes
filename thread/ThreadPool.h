@@ -12,7 +12,7 @@
 #include <deque>
 
 class ThreadPool
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	typedef boost::function<void()> Task;

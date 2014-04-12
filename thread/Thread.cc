@@ -39,9 +39,10 @@ pid_t gettid() {
 
 struct ThreadData {
 	typedef Thread::ThreadFunc ThreadFunc;
-	ThreadFunc func;
-	std::string name;
-	boost::weak_ptr<pid_t> wkTidPtr;
+
+	ThreadFunc				func;
+	std::string				name;
+	boost::weak_ptr<pid_t>	wkTidPtr;
 
 	ThreadData(const ThreadFunc& func
 			, const std::string& name

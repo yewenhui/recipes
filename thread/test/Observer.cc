@@ -91,4 +91,5 @@ int main()
 	subject.notifyObservers();
 	delete pFoo;
 	subject.notifyObservers();
+
 }

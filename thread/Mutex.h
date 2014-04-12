@@ -2,12 +2,13 @@
 #define _MUTEX_H_
 
 #include "Thread.h"
+
 #include <boost/noncopyable.hpp>
-#include <pythread.h>
+#include <pthread.h>
 #include <assert.h>
 
 class MutexLock
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	explicit MutexLock() 
@@ -50,7 +51,7 @@ private:
 };
 
 class MutexLockGuard
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	explicit MutexLockGuard(MutexLock& mutex)
@@ -63,15 +64,12 @@ public:
 		m_Mutex.unlock();
 	}
 
-
 private:
 	MutexLock&		m_Mutex;
 
 };
 
-// Prevent misuse like:
-// MutexLockGuard(mutex);
-// A tempory object doesn't hold the lock for long!
+// ∑¿÷π≥ˆœ÷£∫ MutexLockGuard(mutex);
 #define MutexLockGuard(x) error "Missing guard object name"
 
 #endif // _MUTEX_H_

@@ -6,7 +6,7 @@
 
 template<typename T>
 class AtomicIntegerT
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	AtomicIntegerT()

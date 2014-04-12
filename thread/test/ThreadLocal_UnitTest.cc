@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 class Test
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	Test() {

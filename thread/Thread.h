@@ -9,7 +9,7 @@
 #include "Atomic.h"
 
 class Thread
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	typedef boost::function<void()> ThreadFunc;
@@ -40,9 +40,9 @@ private:
 
 namespace CurrentThread
 {
-	pid_t tid();
-	const char* name();
-	bool isMainThread();
+	pid_t			tid();
+	const char*		name();
+	bool			isMainThread();
 
 }
 

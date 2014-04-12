@@ -7,7 +7,7 @@
 
 template<typename T>
 class Singleton
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	static T&		instance() {

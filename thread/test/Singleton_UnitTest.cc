@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 class Test
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	Test() {

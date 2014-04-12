@@ -6,7 +6,7 @@
 
 template<typename T>
 class ThreadLocalSingleton
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	static T&		instance() {

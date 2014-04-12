@@ -6,7 +6,7 @@
 
 template<typename T>
 class ThreadLocal
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	ThreadLocal() {

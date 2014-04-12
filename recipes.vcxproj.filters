@@ -42,6 +42,12 @@
     <ClInclude Include="thread\ThreadPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="thread\BlockingQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\BoundedBlockingQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="thread\Thread.cc">
@@ -75,6 +81,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="thread\test\Observer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\ObserverSafe.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\CopyAndWrite_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\Factory.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\test\ThreadPool_UnitTest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\CountDownLatch.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -71,6 +71,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="thread\Atomic.h" />
+    <ClInclude Include="thread\BlockingQueue.h" />
+    <ClInclude Include="thread\BoundedBlockingQueue.h" />
     <ClInclude Include="thread\Condition.h" />
     <ClInclude Include="thread\Exception.h" />
     <ClInclude Include="thread\Mutex.h" />
@@ -81,14 +83,19 @@
     <ClInclude Include="thread\ThreadPool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="thread\CountDownLatch.h" />
     <ClCompile Include="thread\Exception.cc" />
     <ClCompile Include="thread\test\Atomic_UnitTest.cc" />
+    <ClCompile Include="thread\test\CopyAndWrite_UnitTest.cc" />
     <ClCompile Include="thread\test\Exception_UnitTest.cc" />
+    <ClCompile Include="thread\test\Factory.cc" />
     <ClCompile Include="thread\test\Observer.cc" />
+    <ClCompile Include="thread\test\ObserverSafe.cc" />
     <ClCompile Include="thread\test\SingletonThreadLocal_UnitTest.cc" />
     <ClCompile Include="thread\test\Singleton_UnitTest.cc" />
     <ClCompile Include="thread\test\ThreadLocalSingleton_UnitTest.cc" />
     <ClCompile Include="thread\test\ThreadLocal_UnitTest.cc" />
+    <ClCompile Include="thread\test\ThreadPool_UnitTest.cc" />
     <ClCompile Include="thread\test\Thread_UnitTest.cc" />
     <ClCompile Include="thread\Thread.cc" />
     <ClCompile Include="thread\ThreadPool.cc" />

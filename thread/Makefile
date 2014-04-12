@@ -2,15 +2,20 @@ CXXFLAGS=-g -Wall
 CXXFLAGS+=-O2
 
 HEADERS = $(wildcard *.h)
-TESTS = \
-		atomic_unittest \
-		thread_unittest \
-		singleton_unittest \
-		threadlocal_unittest \
-		threadlocalsingleton_unitest \
-		singletonthreadlocal_unittest \
-		exception_unittest \
-		observer_unittest
+TESTS = boundedblockingqueue_unitTest \
+#		blockingqueue_unittest \
+#		threadpool_unittest \
+#		factory_unittest \
+#		copyandwrite_unitTest \
+#		observersafe_unittest \
+#		atomic_unittest \
+#		thread_unittest \
+#		singleton_unittest \
+#		threadlocal_unittest \
+#		threadlocalsingleton_unitest \
+#		singletonthreadlocal_unittest \
+#		exception_unittest \
+#		observer_unittest \
 
 all: $(TESTS)
 
@@ -32,6 +37,14 @@ singletonthreadlocal_unittest: test/SingletonThreadLocal_UnitTest.cc Thread.cc
 exception_unittest: test/Exception_UnitTest.cc Exception.cc
 
 observer_unittest: test/Observer.cc
+observersafe_unittest: test/ObserverSafe.cc Thread.cc
+factory_unittest: test/Factory.cc Thread.cc
+
+copyandwrite_unitTest: test/CopyAndWrite_UnitTest.cc Thread.cc
+
+threadpool_unittest: test/ThreadPool_UnitTest.cc ThreadPool.cc Exception.cc Thread.cc
+blockingqueue_unittest: test/BlockingQueue_UnitTest.cc Thread.cc
+boundedblockingqueue_unitTest: test/BoundedBlockingQueue_UnitTest.cc Thread.cc
 
 clean:
 	rm -f $(TESTS)

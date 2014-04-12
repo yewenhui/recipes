@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 ThreadPool::ThreadPool(const std::string& strName /*= std::string()*/)
-	: m_StrName(strName)
-	, m_Mutex()
+	: m_Mutex()
 	, m_Cond(m_Mutex)
+	, m_StrName(strName)
 	, m_bRunning(false)
 {
 

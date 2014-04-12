@@ -7,7 +7,7 @@
 #include <errno.h>
 
 class Condition
-	: public boost::noncopyable
+	: private boost::noncopyable
 {
 public:
 	explicit Condition(MutexLock& mutex)
@@ -28,7 +28,7 @@ public:
 		struct timespec abstime;
 		clock_gettime(CLOCK_REALTIME, &abstime);
 		abstime.tv_sec = nSeconds;
-		return ETIMEDOUT == pthread_cond_timewait(&m_PCond, m_Mutex.getPthreadMutex(), &abstime);
+		return ETIMEDOUT == pthread_cond_timedwait(&m_PCond, m_Mutex.getPthreadMutex(), &abstime);
 	}
 
 	void			notify() {
