@@ -70,6 +70,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="logging\LogFile.h" />
+    <ClInclude Include="logging\LogStream.h" />
+    <ClInclude Include="tcp\Acceptor.h" />
+    <ClInclude Include="tcp\Common.h" />
+    <ClInclude Include="tcp\InetAddress.h" />
+    <ClInclude Include="tcp\Socket.h" />
+    <ClInclude Include="tcp\TcpStream.h" />
+    <ClInclude Include="tcp\Types.h" />
     <ClInclude Include="thread\Atomic.h" />
     <ClInclude Include="thread\BlockingQueue.h" />
     <ClInclude Include="thread\BoundedBlockingQueue.h" />
@@ -83,9 +91,18 @@
     <ClInclude Include="thread\ThreadPool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="logging\LogFile.cpp" />
+    <ClCompile Include="logging\LogStream.cpp" />
+    <ClCompile Include="tcp\Acceptor.cpp" />
+    <ClCompile Include="tcp\InetAddress.cpp" />
+    <ClCompile Include="tcp\Socket.cpp" />
+    <ClCompile Include="tcp\TcpStream.cpp" />
+    <ClCompile Include="tcp\Tcp_Test.cpp" />
     <ClCompile Include="thread\CountDownLatch.h" />
     <ClCompile Include="thread\Exception.cc" />
     <ClCompile Include="thread\test\Atomic_UnitTest.cc" />
+    <ClCompile Include="thread\test\BlockingQueue_UnitTest.cc" />
+    <ClCompile Include="thread\test\BoundedBlockingQueue_UnitTest.cc" />
     <ClCompile Include="thread\test\CopyAndWrite_UnitTest.cc" />
     <ClCompile Include="thread\test\Exception_UnitTest.cc" />
     <ClCompile Include="thread\test\Factory.cc" />
